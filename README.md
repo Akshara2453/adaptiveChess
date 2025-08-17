@@ -1,6 +1,6 @@
 # adaptiveChess
 
-this is a reinforcement+stockfish chess website (under progress)
+this is a reinforcement+stockfish chess website
 
 Frontend Module Descriptions (public/js/)
 
