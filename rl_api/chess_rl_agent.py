@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import numpy as np
 import chess
 
-# ======== Neural Network ========
+#Neural Network
 
 class ChessNet(nn.Module):
     def __init__(self):
@@ -27,7 +27,7 @@ class ChessNet(nn.Module):
         value = torch.tanh(self.value_head(x))
         return policy, value
 
-# ======== Utility ========
+#Utility
 
 def board_to_tensor(board):
     piece_map = {
@@ -47,8 +47,7 @@ def estimate_user_elo(results):
     avg_score = sum(results) / len(results)
     return int(600 + 600 * (avg_score - 0.2) / 0.6)
 
-# ======== RL Agent ========
-
+#RL Agent
 class RLChessAgent:
     def __init__(self, model_path):
         self.model = ChessNet()

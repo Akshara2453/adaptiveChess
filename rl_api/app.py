@@ -41,7 +41,7 @@ def get_agent(user_id):
 @app.route('/login', methods=['POST', 'OPTIONS'])
 def login():
     if request.method == 'OPTIONS':
-        return '', 204  # Preflight response
+        return '', 204  
 
     data = request.json
     user_id = data.get('user_id')
@@ -61,7 +61,6 @@ def rl_move():
     fen = data.get("fen")
     user_id = data.get("user_id")
 
-    # TODO: Look up the user’s ELO from a database. For now, assume 800.
     elo = data.get("elo")
     agent.set_user_elo(elo)
 

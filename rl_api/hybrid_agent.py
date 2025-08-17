@@ -19,7 +19,7 @@ class HybridChessAgent:
         user_elo = self.rl_agent.user_elo
         print(f"[SELECT_MOVE] Evaluating {len(legal_moves)} legal moves at Elo {user_elo}")
         
-        # 1. Tactical Moves: Checkmate > Capture > Check
+        # 1. Tactical Moves: Checkmate > Check > Capture
         tactical_moves = []
         for move in legal_moves:
             board.push(move)
